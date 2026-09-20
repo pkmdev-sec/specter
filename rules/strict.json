@@ -1,0 +1,11 @@
+{
+  "name": "strict",
+  "description": "Higher security threshold for the hook gate",
+  "version": "1.0.0",
+  "thresholds": {
+    "security": 90
+  },
+  "blocking": {
+    "blockOnCriticalSecurity": true
+  }
+}

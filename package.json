@@ -1,0 +1,39 @@
+{
+  "name": "@pkmdev-sec/specter",
+  "version": "1.0.0",
+  "description": "SPECTER — Invisible Quality Gate: Output validation and quality assurance",
+  "type": "module",
+  "main": "lib/quality-scorer.mjs",
+  "exports": {
+    ".": "./lib/quality-scorer.mjs",
+    "./syntax": "./lib/syntax-checker.mjs",
+    "./security": "./lib/security-scanner.mjs",
+    "./consistency": "./lib/consistency-checker.mjs",
+    "./quality": "./lib/quality-scorer.mjs",
+    "./fixer": "./lib/auto-fixer.mjs"
+  },
+  "files": [
+    "lib",
+    "hooks/specter-gate.py",
+    "rules",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --experimental-vm-modules tests/run-tests.mjs && node --test tests/new-features.test.mjs && python3 tests/test_specter_gate.py"
+  },
+  "keywords": ["quality", "validation", "security", "linting", "output-gate"],
+  "author": "pkmdev-sec",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkmdev-sec/specter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pkmdev-sec/specter/issues"
+  },
+  "homepage": "https://github.com/pkmdev-sec/specter#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

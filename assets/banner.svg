@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <defs>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="ghostGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#06b6d4" stroke-width="0.3" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1500" height="500" fill="#000000"/>
+  <rect width="1500" height="500" fill="url(#grid)"/>
+  <rect width="1500" height="500" fill="url(#scanlines)"/>
+  <rect y="0" width="1500" height="2" fill="url(#accentGrad)" opacity="0.8"/>
+  <rect y="498" width="1500" height="2" fill="url(#accentGrad)" opacity="0.4"/>
+  <!-- Ghost-eye logo -->
+  <g transform="translate(750, 190)" filter="url(#glow)">
+    <!-- Ghost body outline -->
+    <path d="M-25,-30 C-25,-45 25,-45 25,-30 L25,20 L18,12 L10,20 L0,12 L-10,20 L-18,12 L-25,20Z" fill="none" stroke="url(#ghostGrad)" stroke-width="2" opacity="0.8"/>
+    <!-- Scanning eye -->
+    <ellipse cx="0" cy="-15" rx="14" ry="9" fill="none" stroke="#06b6d4" stroke-width="1.8" opacity="0.9"/>
+    <circle cx="0" cy="-15" r="5" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="0" cy="-15" r="2" fill="#000000"/>
+    <!-- Scan beam from eye -->
+    <path d="M14,-15 L60,-35 L60,5Z" fill="#06b6d4" opacity="0.06"/>
+    <line x1="14" y1="-15" x2="60" y2="-35" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
+    <line x1="14" y1="-15" x2="60" y2="5" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
+    <!-- Left scan trace -->
+    <path d="M-14,-15 L-60,-35 L-60,5Z" fill="#06b6d4" opacity="0.04"/>
+    <line x1="-14" y1="-15" x2="-60" y2="-35" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
+    <line x1="-14" y1="-15" x2="-60" y2="5" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
+  </g>
+  <!-- Scanning wave effects -->
+  <g filter="url(#softGlow)" opacity="0.08">
+    <circle cx="750" cy="190" r="80" fill="none" stroke="#06b6d4" stroke-width="0.5"/>
+    <circle cx="750" cy="190" r="120" fill="none" stroke="#06b6d4" stroke-width="0.5"/>
+    <circle cx="750" cy="190" r="160" fill="none" stroke="#06b6d4" stroke-width="0.3"/>
+  </g>
+  <!-- Title -->
+  <text x="750" y="290" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="700" letter-spacing="18" fill="url(#accentGrad)" filter="url(#glow)">SPECTER</text>
+  <!-- Subtitle -->
+  <text x="750" y="330" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="300" letter-spacing="6" fill="#06b6d4" opacity="0.7">INVISIBLE QUALITY GATE</text>
+  <!-- Decorative line -->
+  <rect x="600" y="345" width="300" height="1" fill="url(#glowGrad)"/>
+  <!-- Bottom tagline -->
+  <text x="750" y="420" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="12" letter-spacing="3" fill="#555555">WATCHING UNSEEN, ENSURING QUALITY</text>
+</svg>

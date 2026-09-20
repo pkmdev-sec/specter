@@ -1,0 +1,11 @@
+{
+  "name": "default",
+  "description": "Default security gate thresholds",
+  "version": "1.0.0",
+  "thresholds": {
+    "security": 70
+  },
+  "blocking": {
+    "blockOnCriticalSecurity": true
+  }
+}
